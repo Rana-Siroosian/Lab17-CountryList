@@ -58,7 +58,6 @@ public class CountriesApp {
 		int choice = Validator.getInt(scnr, "\nWhat would you like to do? ", 1,5);
 
 		System.out.println("--------------------------------");
-		
 		switch (choice) {
 		
 		case 1:
@@ -83,13 +82,15 @@ public class CountriesApp {
 				if (question.equalsIgnoreCase("y")) {
 
 					System.out.println("\nThank you, have a great day!");
-					break;
+//					break;
 				}
-				if (question.equalsIgnoreCase("n")) {
+				else if (question.equalsIgnoreCase("n")) {
 					System.out.println("--------------------------------");
 					printMenu(scnr, country);
 
 				}
+				scnr.nextLine();
+
 		}
 //		fileHelper.rewrite(country);
 
